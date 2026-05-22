@@ -1,0 +1,3 @@
+function selectVM(vorm) {
+        
+}
