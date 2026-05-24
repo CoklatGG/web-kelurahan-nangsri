@@ -21,10 +21,11 @@
     </div>
 
     <div class="main">
+        <script src="script.js"></script>
         <div class="box-container">
             <div class="kades-container">
                 <div class="foto-kades-container">
-                    <img src="assets/kepala_desa.png" width="100%">
+                    <img src="assets/kepala_desa.webp" width="100%">
                 </div>
                 
                 <div class="quote-container">
@@ -40,8 +41,23 @@
 
         <div class="box-container">
             <div class="visi-misi-container">
-                <div class="visi" onclick="">VISI</div>
-                <div class="misi">MISI</div>
+                <div class="visi" onclick="selectVM('.visi')">
+                    <h1>VISI</h1>
+                    <p>
+                        "Terwujudnya Desa yang Mandiri, Sejahtera, dan Berdaya Saing Berlandaskan Nilai Gotong Royong dan Kearifan Lokal"
+                    </p>
+                </div>
+                <div class="misi" onclick="selectVM('.misi')">
+                    <h1>MISI</h1>
+                    <p>
+                        1. Meningkatkan kualitas pelayanan publik yang cepat, transparan, dan akuntabel kepada seluruh masyarakat.<br>
+                        2. Mengembangkan potensi ekonomi lokal melalui pemberdayaan UMKM, pertanian, dan pariwisata desa.<br>
+                        3. Membangun infrastruktur yang merata dan berkelanjutan untuk mendukung kesejahteraan masyarakat.<br>
+                        4. Meningkatkan kualitas sumber daya manusia melalui pendidikan, pelatihan, dan pembinaan generasi muda.<br>
+                        5. Melestarikan nilai-nilai budaya dan kearifan lokal sebagai identitas dan kebanggaan warga desa.<br>
+                        6. Memperkuat tata kelola pemerintahan desa yang bersih, demokratis, dan partisipatif.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -49,6 +65,5 @@
     <footer>
         © 2026 Website tidak resmi Desa Nangsri. All rights reserved.
     </footer>
-
 </body>
 </html>
