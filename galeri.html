@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desa Nangsri - Galeri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar-fixed-top">
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="profil.html">Profil</a>
+            <a href="galeri.html">Galeri</a>
+            <a href="unduhan.html">Unduhan</a>
+        </div>
+    </header>
+    
+    <div class="welcome">
+        <h1>Galeri</h1>
+    </div>
+    
+    <div class="main">
+        <script src="script.js"></script>
+        <div class="gallery-container">
+            <div class="gallery-item" onclick="zoomImage(this)">
+                <img src="assets/img/kepala_desa.webp">
+                <div class="gallery-overlay">
+                    <p>Kepala Desa Nangsri, Bp. Drs. Sumarjo</p>
+                </div>
+            </div>
+            <div class="gallery-item" onclick="zoomImage(this)">
+                <img src="assets/img/kantor.webp">
+                <div class="gallery-overlay">
+                    <p>Kantor Pusat Desa Nangsri</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Website tidak resmi Desa Nangsri. All rights reserved.
+    </footer>
+</body>
+</html>

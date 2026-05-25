@@ -1,5 +1,5 @@
-var already_clicked = false;
-var v_is_selected = false;
+var already_clicked = false
+var v_is_selected = false
 
 function selectVM(vorm) {
     const vm_container = document.querySelector(".visi-misi-container")
@@ -17,27 +17,52 @@ function selectVM(vorm) {
         if (vorm == ".visi") {
             visi.classList.add("active")
             misi.classList.add("hidden")
-            v_is_selected = true;
+            v_is_selected = true
         } 
         else if (vorm == ".misi") {
             misi.classList.add("active")
             visi.classList.add("hidden")
-            v_is_selected = false;
+            v_is_selected = false
         }
     }
     else {
         if (v_is_selected) {
             misi.classList.add("active")
             visi.classList.add("hidden")
-            v_is_selected = false;
+            v_is_selected = false
         } 
         else {
             visi.classList.add("active")
             misi.classList.add("hidden")
-            v_is_selected = true;
+            v_is_selected = true
         }
     }
 
     vm_container.classList.add("one-please")
-    already_clicked = true;
+    already_clicked = true
 }
+
+function zoomImage(item) {
+    const zoomOverlay = document.createElement("div")
+    zoomOverlay.classList.add("zoom-overlay")
+
+    const zoomImage = document.createElement("img")
+    zoomImage.src = item.children[0].src
+
+    document.body.appendChild(zoomOverlay)
+    zoomOverlay.appendChild(zoomImage)
+
+    zoomOverlay.addEventListener("click", function() {
+        document.body.removeChild(zoomOverlay)
+    })
+}
+
+const root = document.documentElement
+// const style = getComputedStyle(root
+
+
+// const color_lerp = document.createElement("style")
+// color_lerp.innerHTML = `
+
+
+// `
