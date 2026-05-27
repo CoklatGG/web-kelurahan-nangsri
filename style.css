@@ -24,8 +24,6 @@ body {
 }
 
 footer {
-  position: relative;
-  bottom: 0vw;
   margin-top: 100px;
   padding: 36px;
   background: var(--bg-dark);
@@ -36,6 +34,13 @@ footer {
 
 nav {
   padding: 10px;
+}
+
+.grr {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .navbar {
@@ -233,6 +238,7 @@ nav {
 }
 
 .download-btn {
+  padding: 5px;
   text-decoration: none;
   display: inline-flex;
   justify-content: center;
@@ -461,9 +467,13 @@ nav {
 .misi.active p {
   display: inline-flex;
   overflow: hidden;
-  height: 100%;
+  height: fit-content;
   width: 90%;
   margin-bottom: 74px;
+}
+
+.misi.hidden p {
+  height: fit-content;
 }
 
 .visi.active {
@@ -474,12 +484,15 @@ nav {
   animation: m-change-color var(--eat-speed) ease;
 }
 
-.hidden {
+.hidden,
+.hidden-after {
   width: 0px;
   color: rgba(255, 255, 255, 0);
   overflow: hidden;
   animation: smaller-h var(--eat-speed) ease;
 }
+
+
 
 @keyframes cont-smallen {
   from {
@@ -551,6 +564,14 @@ nav {
 }
 
 @media (max-width: 1000px) {
+  .event-container {
+    flex-direction: column;
+  }
+
+  .event-container img {
+    width: calc(100% - 50px);
+  }
+
   .visi-misi-container {
     flex-direction: column;
   }
