@@ -12,6 +12,7 @@
   --dark-vorm: rgb(102, 0, 255);
   --eat-speed: 0.5s;
   --border-radius: 15px;
+  interpolate-size: allow-keywords;
 }
 
 body {
@@ -44,19 +45,26 @@ nav {
 }
 
 .navbar {
+  display: flex;
   background: var(--bg-1);
   width: 100vw;
-  padding: 15px;
+  padding: 10px;
   box-shadow: black 0px 0px 50px;
 }
 
 .navbar a {
   display: inline-block;
   color: var(--text-dark);
-  margin: 10px;
+  margin: auto 10px;
   text-decoration: none;
   font-size: clamp(1rem, 4vw, 1.5rem);
   transition: all 100ms ease;
+}
+
+.navbar img {
+  width: 3rem;
+  margin: auto 10px;
+  object-fit: fill;
 }
 
 .navbar a:hover {
@@ -121,6 +129,7 @@ nav {
   align-items: center;
 }
 
+.profil-box,
 .round-box {
   width: 1500px;
   background: var(--bg-2);
@@ -129,6 +138,10 @@ nav {
   margin-bottom: 25px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.profil-box {
+  width: 1200px;
 }
 
 .main {
@@ -390,6 +403,7 @@ nav {
   align-items: center;
   justify-content: center;
   margin: auto;
+  margin-bottom: 25px;
   gap: clamp(20px, 8vw, 150px);
   width: 1200px;
   height: clamp(700px, calc(1525px - 50vw), 1525px);
@@ -440,11 +454,11 @@ nav {
 
 .visi {
   text-align: center;
-  background: linear-gradient(180deg, rgb(138, 138, 255), blue);
+  background: linear-gradient(180deg, var(--light-v), var(--dark-v));
 }
 
 .misi {
-  background: linear-gradient(180deg, rgb(255, 138, 138), red);
+  background: linear-gradient(180deg, var(--light-m), var(--dark-m));
 }
 
 .one-please {
@@ -453,7 +467,7 @@ nav {
 }
 
 .active {
-  background: linear-gradient(180deg, rgb(208, 138, 255), rgb(102, 0, 255));
+  background: linear-gradient(180deg, var(--light-vorm), var(--dark-vorm));
 }
 
 .active p {
@@ -470,10 +484,11 @@ nav {
   height: fit-content;
   width: 90%;
   margin-bottom: 74px;
+  animation: m-p-bigging var(--eat-speed) ease;
 }
 
 .misi.hidden p {
-  height: fit-content;
+  height: 0;
 }
 
 .visi.active {
@@ -492,7 +507,37 @@ nav {
   animation: smaller-h var(--eat-speed) ease;
 }
 
+.misi.hidden-after {
+  animation: m-back var(--eat-speed) ease;
+}
 
+.visi.hidden-after {
+  animation: v-back var(--eat-speed) ease;
+}
+
+.potensi-container {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  box-shadow: black 0 0 20px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 25px;
+  max-width: 1200px;
+}
+
+.profil-box.potensi-description {
+  padding: 0;
+}
+
+.potensi-description h1{
+  font-size: 3rem;
+  margin-left: 2rem;
+}
+
+.potensi-description p{
+  font-size: 2rem;
+  margin-left: 4rem;
+}
 
 @keyframes cont-smallen {
   from {
@@ -593,12 +638,11 @@ nav {
     height: fit-content;
     width: 90%;
     margin-bottom: 10%;
-    animation: bigger var(--eat-speed) ease;
   }
 }
 
 @media (max-width: 1000px) {
   .misi.active p {
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: clamp(1rem, 7vw, 2rem);
   }
 }
