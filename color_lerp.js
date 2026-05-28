@@ -29,7 +29,6 @@ function keyframesString(color_1b, color_1a, color_2b, color_2a, name, step) {
     
     for (i = 0; i < step; i++) {
         let t = i / (step - 1)
-        console.log(t)
         keyframesString += `${Math.round(t * 100)}% {
             background: linear-gradient(180deg, ${lerpColor(color_1b, color_2b, t)}, ${lerpColor(color_1a, color_2a, t)})
         }`

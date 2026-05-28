@@ -23,9 +23,6 @@
     </div>
 
     <div class="main">
-        <script src="script.js"></script>
-        <script src="color_lerp.js"></script>
-
         <div class="box-container">
             <div class="profil-box title">
                 Sambutan Kepala Desa
@@ -90,30 +87,54 @@
         </div>
 
         <div class="box-container">
-            <div class="profil-box potensi-description">
-                <h1>1. Pertanian</h1>
-                <p>- Produksi padi, jagung, cabai, dan lainnya.</p>
-                <p>- Produksi sayuran dan palawija.</p>
-                <p>- Sistem irigasi desa.</p>
-                <p>- Lahan pertanian subur.</p>
-                <h1>2. UMKM</h1>
-                <p>- Warung dan usaha lokal.</p>
-                <p>- Industri rumahan.</p>
-                <p>- Kuliner tradisional.</p>
-                <p>- Kerajinan warga.</p>
-                <h1>3. Peternakan</h1>
-                <p>- Peternakan sapi berkualitas.</p>
-                <p>- Produksi daging.</p>
-                <p>- Produksi pakan ternak.</p>
-                <p>- Peluang usaha yang menjanjikan.</p>
-                <h1>4. Budaya</h1>
-                <p>- Gotong royong warga.</p>
-                <p>- Karang taruna aktif.</p>
-                <p>- Tradisi desa.</p>
-                <p>- Kesenian lokal.</p>
+            <div class="potensi-potensi">
+                <button id="before" onclick="changePotensi(-1)">
+                    <
+                </button>
+                <div class="potensi-description-container">
+                    <div class="potensi-description">
+                        <div class="potensi-item potensi-item-show">
+                            <h1>1. Pertanian</h1>
+                            <p>- Produksi padi, jagung, cabai, dan lainnya.</p>
+                            <p>- Produksi sayuran dan palawija.</p>
+                            <p>- Sistem irigasi desa.</p>
+                            <p>- Lahan pertanian subur.</p>
+                        </div>
+                        
+                        <div class="potensi-item">
+                            <h1>2. UMKM</h1>
+                            <p>- Warung dan usaha lokal.</p>
+                            <p>- Industri rumahan.</p>
+                            <p>- Kuliner tradisional.</p>
+                            <p>- Kerajinan warga.</p>
+                        </div>
+                        
+                        <div class="potensi-item">
+                            <h1>3. Peternakan</h1>
+                            <p>- Peternakan sapi berkualitas.</p>
+                            <p>- Produksi daging.</p>
+                            <p>- Produksi pakan ternak.</p>
+                            <p>- Peluang usaha yang menjanjikan.</p>
+                        </div>
+                        
+                        <div class="potensi-item">
+                            <h1>4. Budaya</h1>
+                            <p>- Gotong royong warga.</p>
+                            <p>- Karang taruna aktif.</p>
+                            <p>- Tradisi desa.</p>
+                            <p>- Kesenian lokal.</p>
+                        </div>
+                    </div>
+                </div>
+                <button id="after" onclick="changePotensi(1)">
+                    >
+                </button>
             </div>
         </div>
 
+        <script src="script.js"></script>
+        <script src="color_lerp.js"></script>
+        <script src="potensi_slider.js"></script>
     </div>
     
     <footer>
